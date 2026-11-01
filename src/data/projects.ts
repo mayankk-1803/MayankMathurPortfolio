@@ -4,7 +4,6 @@ export interface Project {
   title: string;
   category: string;
   role: string;
-  duration: string;
   description: string;
   problem: string;
   solution: string;
@@ -24,7 +23,6 @@ export const projects: Project[] = [
     title: "AI SAAS PLATFORM",
     category: "AI + Content Generation SaaS",
     role: "Full Stack & AI Developer",
-    duration: "2 Months",
     description:
       "A premium AI-powered SaaS platform for content and image generation, engineered for low-latency batch prompt dispatch and intelligent rate-limiting.",
     problem:
@@ -46,7 +44,6 @@ export const projects: Project[] = [
     title: "IRECHARGE FINTECH",
     category: "FinTech Recharge & Wallet Platform",
     role: "Full Stack Developer",
-    duration: "Production Ready",
     description:
       "Production-ready FinTech platform processing mobile recharges, DTH, FASTag, and utility bill payments with real-time wallet tracking and provider failover.",
     problem:
@@ -67,7 +64,6 @@ export const projects: Project[] = [
     title: "REAL-TIME CHAT ENGINE",
     category: "MERN + WebSockets Messaging",
     role: "Full Stack Engineer",
-    duration: "1 Month",
     description:
       "High-speed messaging application featuring real-time room communication, online presence alerts, and end-to-end encrypted chat persistence.",
     problem:
@@ -87,7 +83,6 @@ export const projects: Project[] = [
     title: "PRIME ORIGIN EXPORT",
     category: "Global Logistics Business Platform",
     role: "Frontend Architect",
-    duration: "1.5 Months",
     description:
       "High-performance international trade showcase platform designed to convert B2B enterprise leads and present global supply operations.",
     problem:
@@ -107,7 +102,6 @@ export const projects: Project[] = [
     title: "MEDIMIND AI CLINICAL",
     category: "Healthcare Diagnostic Assistant",
     role: "Lead Developer",
-    duration: "3 Months",
     description:
       "Intelligent healthcare support application providing symptom triage, medical report summarization, and interactive clinical consultations.",
     problem:
@@ -122,4 +116,3 @@ export const projects: Project[] = [
     imagePath: "/images/projects/medimind.png",
   },
 ];
-

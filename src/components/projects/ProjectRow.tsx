@@ -39,33 +39,38 @@ export default function ProjectRow({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}
-        className={`relative py-8 sm:py-12 px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer transition-colors duration-300 select-none ${
+        className={`relative py-6 sm:py-10 md:py-12 px-4 sm:px-6 md:px-12 flex items-center justify-between gap-4 cursor-pointer transition-colors duration-300 select-none ${
           isOpen ? "bg-[#F7F8F9]" : isHovered ? "bg-black/[0.02]" : "bg-transparent"
         }`}
       >
-        {/* Left: Project Number + Large Title */}
-        <div className="flex items-baseline gap-4 sm:gap-8">
-          <span className="font-mono text-xs sm:text-sm text-[#777777] font-semibold w-8">
+        {/* Left: Project Number + Title + Mobile Category */}
+        <div className="flex items-start sm:items-baseline gap-3 sm:gap-6 md:gap-8 min-w-0 flex-1">
+          <span className="font-mono text-xs sm:text-sm text-[#777777] font-semibold w-7 sm:w-8 shrink-0 pt-0.5 sm:pt-0">
             0{index + 1}
           </span>
-          <motion.h3
-            animate={{ x: isHovered ? 8 : 0 }}
-            transition={{ duration: 0.2 }}
-            className={`font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight transition-colors duration-200 ${
-              isOpen || isHovered ? "text-[#050505]" : "text-[#222222]"
-            }`}
-          >
-            {project.title}
-          </motion.h3>
+          <div className="flex flex-col min-w-0 flex-1">
+            <motion.h3
+              animate={{ x: isHovered ? 8 : 0 }}
+              transition={{ duration: 0.2 }}
+              className={`font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight transition-colors duration-200 leading-tight ${
+                isOpen || isHovered ? "text-[#050505]" : "text-[#222222]"
+              }`}
+            >
+              {project.title}
+            </motion.h3>
+            <span className="font-mono text-[11px] uppercase tracking-wider text-[#777777] mt-1 md:hidden truncate">
+              {project.category}
+            </span>
+          </div>
         </div>
 
-        {/* Right: Category + Expand Indicator */}
-        <div className="flex items-center justify-between sm:justify-end gap-6 pl-12 sm:pl-0">
+        {/* Right: Category (Desktop) + Expand Toggle Button */}
+        <div className="flex items-center gap-6 shrink-0">
           <span className="font-mono text-xs uppercase tracking-wider text-[#777777] max-w-xs text-right hidden md:inline">
             {project.category}
           </span>
 
-          <div className="w-10 h-10 rounded-full border border-black/15 flex items-center justify-center text-[#090909] bg-white shadow-2xs group-hover:scale-105 transition-transform shrink-0">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/15 flex items-center justify-center text-[#090909] bg-white shadow-2xs group-hover:scale-105 transition-transform shrink-0">
             {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, AlertCircle, Compass, ShieldCheck, Clock, UserCheck } from "lucide-react";
+import { ExternalLink, AlertCircle, Compass, ShieldCheck, UserCheck } from "lucide-react";
 import { GithubIcon } from "@/components/ui/BrandIcons";
 import { Project } from "@/data/projects";
 import ProjectPreview from "./ProjectPreview";
@@ -22,16 +22,11 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
       <div className="py-8 sm:py-12 px-4 sm:px-8 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         {/* Left Column (7 cols): Detailed Breakdown & Actions */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          {/* Metadata Bar */}
-          <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-[#555555] border-b border-black/10 pb-4">
+          {/* Metadata Bar (Role & Category without duration) */}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 font-mono text-xs text-[#555555] border-b border-black/10 pb-4">
             <span className="flex items-center gap-1.5 font-semibold text-[#090909]">
               <UserCheck className="w-3.5 h-3.5" />
-              {project.role}
-            </span>
-            <span>·</span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
-              {project.duration}
+              <span>{project.role}</span>
             </span>
             <span>·</span>
             <span className="uppercase tracking-wider">

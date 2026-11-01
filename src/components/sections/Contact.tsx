@@ -45,12 +45,12 @@ export default function Contact({ onOpenContact }: ContactProps) {
   return (
     <section
       id="contact"
-      className="relative w-full bg-[#DCDDDF] text-[#090909] pt-24 sm:pt-32 pb-12 px-4 sm:px-6 md:px-12 overflow-hidden select-none"
+      className="relative w-full bg-[#DCDDDF] text-[#090909] pt-16 sm:pt-24 md:pt-32 pb-12 px-4 sm:px-6 md:px-12 overflow-hidden select-none scroll-mt-20"
     >
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 opacity-15 pointer-events-none bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-16 sm:gap-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-12 sm:gap-20">
         {/* Top Counter Label */}
         <div className="flex items-center justify-between border-b border-black/15 pb-6">
           <SectionLabel number="05" total="05" title="GET IN TOUCH" theme="light" sectionId="contact" />
@@ -64,8 +64,9 @@ export default function Contact({ onOpenContact }: ContactProps) {
           {/* Left / Center (8 cols): Arrow + LET'S WORK TOGETHER */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-8">
             {/* Diagonal Arrow Graphic */}
-            <div className="p-4 sm:p-6 rounded-3xl border border-black/15 bg-white/40 backdrop-blur-xs flex items-center justify-center self-start sm:self-auto shrink-0">
-              <Arrow size={90} direction="up-right" className="text-[#090909]" />
+            <div className="p-3.5 sm:p-6 rounded-2xl sm:rounded-3xl border border-black/15 bg-white/40 backdrop-blur-xs flex items-center justify-center self-start sm:self-auto shrink-0">
+              <Arrow size={56} direction="up-right" className="text-[#090909] sm:hidden" />
+              <Arrow size={90} direction="up-right" className="text-[#090909] hidden sm:block" />
             </div>
 
             {/* Massive Editorial Headline */}
@@ -75,7 +76,7 @@ export default function Contact({ onOpenContact }: ContactProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none tracking-tighter text-[#050505] uppercase"
+                className="font-display text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-none tracking-tighter text-[#050505] uppercase"
               >
                 LET&apos;S WORK
                 <br />
@@ -85,12 +86,12 @@ export default function Contact({ onOpenContact }: ContactProps) {
           </div>
 
           {/* Right (4 cols): CTA Button */}
-          <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-end pb-2">
+          <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-end pb-2 w-full">
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={onOpenContact}
-              className="px-8 py-5 rounded-full bg-[#050505] text-white hover:bg-black font-mono text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-xl flex items-center gap-3 cursor-pointer select-none"
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 rounded-full bg-[#050505] text-white hover:bg-black font-mono text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold transition-all duration-300 shadow-xl flex items-center justify-center gap-3 cursor-pointer select-none"
             >
               <span>SEND ME A MESSAGE</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -141,7 +142,7 @@ export default function Contact({ onOpenContact }: ContactProps) {
         </div>
 
         {/* Footer Copyright */}
-        <div className="border-t border-black/15 pt-8 pb-4 flex items-center justify-center font-mono text-xs text-[#555555] tracking-widest uppercase">
+        <div className="border-t border-black/15 pt-8 pb-4 flex items-center justify-center font-mono text-xs text-[#555555] tracking-widest uppercase text-center px-4 leading-relaxed">
           © {currentYear} MAYANK MATHUR. ALL RIGHTS RESERVED.
         </div>
       </div>

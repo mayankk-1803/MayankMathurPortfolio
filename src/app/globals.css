@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 380px;
   --font-display: "Bebas Neue", "Anton", Impact, "Arial Narrow", -apple-system, sans-serif;
   --font-body: "Inter", "Manrope", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Consolas, Menlo, monospace;

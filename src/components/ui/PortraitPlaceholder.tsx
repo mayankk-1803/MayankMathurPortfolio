@@ -20,7 +20,7 @@ export default function PortraitPlaceholder({
 
   return (
     <div
-      className={`relative flex items-end justify-center select-none pointer-events-none w-full max-w-[340px] sm:max-w-[440px] md:max-w-[540px] lg:max-w-[640px] xl:max-w-[680px] h-[calc(100svh-260px)] sm:h-[calc(100svh-200px)] md:h-[calc(100svh-130px)] lg:h-[calc(100svh-110px)] xl:h-[calc(100svh-100px)] max-h-[420px] sm:max-h-[500px] md:max-h-[600px] lg:max-h-[680px] xl:max-h-[720px] min-h-[320px] aspect-[1215/1295] ${className}`}
+      className={`relative flex items-end justify-center select-none pointer-events-none w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[420px] md:max-w-[540px] lg:max-w-[640px] xl:max-w-[680px] h-[320px] xs:h-[360px] sm:h-[420px] md:h-[calc(100svh-120px)] lg:h-[calc(100svh-110px)] xl:h-[calc(100svh-100px)] max-h-[420px] sm:max-h-[500px] md:max-h-[600px] lg:max-h-[680px] xl:max-h-[720px] min-h-[280px] aspect-[1215/1295] ${className}`}
     >
       {!imageError ? (
         <div className="relative w-full h-full flex items-end justify-center">
@@ -29,8 +29,8 @@ export default function PortraitPlaceholder({
             alt={alt}
             fill
             priority={priority}
-            sizes="(max-width: 640px) 340px, (max-width: 1024px) 540px, 680px"
-            className="object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)] select-none transition-all duration-300"
+            sizes="(max-width: 640px) 320px, (max-width: 1024px) 540px, 680px"
+            className="object-contain object-bottom drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] select-none transition-all duration-300"
             onError={() => setImageError(true)}
           />
         </div>

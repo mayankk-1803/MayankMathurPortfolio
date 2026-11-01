@@ -72,7 +72,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -88,30 +88,30 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.94, y: 20 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-2xl bg-[#FFFFFF] text-[#090909] rounded-3xl border border-black/15 shadow-2xl p-6 sm:p-10 z-10 my-auto"
+            className="relative w-full max-w-2xl max-h-[92vh] flex flex-col bg-[#FFFFFF] text-[#090909] rounded-2xl sm:rounded-3xl border border-black/15 shadow-2xl p-5 sm:p-8 md:p-10 z-10 my-auto overflow-hidden"
           >
             {/* Header with Close Button */}
-            <div className="flex items-center justify-between border-b border-black/10 pb-5 mb-6">
-              <div className="flex flex-col gap-1">
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#777777]">
+            <div className="flex items-center justify-between border-b border-black/10 pb-4 sm:pb-5 mb-4 sm:mb-6 shrink-0">
+              <div className="flex flex-col gap-0.5 sm:gap-1">
+                <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-[#777777]">
                   DIRECT COMMUNICATION
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl tracking-tight text-[#050505]">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl tracking-tight text-[#050505]">
                   SEND ME A MESSAGE
                 </h3>
               </div>
 
               <button
                 onClick={onClose}
-                className="w-10 h-10 rounded-full border border-black/15 flex items-center justify-center text-[#090909] hover:bg-black/5 transition-colors cursor-pointer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-black/15 flex items-center justify-center text-[#090909] hover:bg-black/5 transition-colors cursor-pointer shrink-0"
                 aria-label="Close dialog"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 overflow-y-auto pr-1">
               {/* Name & Email Row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
@@ -126,7 +126,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Mayank..."
-                    className="w-full px-4 py-3 rounded-xl border border-black/15 bg-black/[0.02] text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
+                    className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-black/15 bg-black/[0.02] text-base sm:text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="w-full px-4 py-3 rounded-xl border border-black/15 bg-black/[0.02] text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
+                    className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-black/15 bg-black/[0.02] text-base sm:text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Full-time opportunity / FinTech project / Architecture..."
-                  className="w-full px-4 py-3 rounded-xl border border-black/15 bg-black/[0.02] text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
+                  className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-black/15 bg-black/[0.02] text-base sm:text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black transition-colors"
                 />
               </div>
 
@@ -176,7 +176,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Hi Mayank, I'd like to talk about..."
-                  className="w-full px-4 py-3 rounded-xl border border-black/15 bg-black/[0.02] text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black resize-none transition-colors"
+                  className="w-full px-4 py-2.5 sm:py-3 rounded-xl border border-black/15 bg-black/[0.02] text-base sm:text-sm text-[#090909] placeholder:text-[#999999] focus:outline-none focus:border-black resize-none transition-colors"
                 />
               </div>
 
@@ -208,15 +208,15 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               </AnimatePresence>
 
               {/* Submit Button */}
-              <div className="flex items-center justify-between border-t border-black/10 pt-4 mt-2">
-                <span className="font-mono text-[11px] text-[#777777]">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-black/10 pt-4 mt-2 shrink-0">
+                <span className="font-mono text-[10px] sm:text-[11px] text-[#777777] text-center sm:text-left">
                   EmailJS Encrypted Transport
                 </span>
 
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#050505] text-white hover:bg-black font-mono text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#050505] text-white hover:bg-black font-mono text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer w-full sm:w-auto"
                 >
                   {status === "loading" ? (
                     <>

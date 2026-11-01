@@ -120,10 +120,10 @@ export default function IntroScreen({ onComplete }: IntroScreenProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
-              className="mt-6 flex items-center gap-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.3em] text-white/50"
+              className="mt-6 flex flex-wrap justify-center items-center gap-2 sm:gap-3 font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-white/50 px-2"
             >
               <span>SOFTWARE DEVELOPER</span>
-              <span className="w-1 h-1 rounded-full bg-white/40" />
+              <span className="w-1 h-1 rounded-full bg-white/40 hidden xs:inline" />
               <span>EDITORIAL PORTFOLIO</span>
             </motion.div>
           </div>

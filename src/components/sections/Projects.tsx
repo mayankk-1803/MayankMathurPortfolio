@@ -22,17 +22,17 @@ export default function Projects({ onOpenContact }: ProjectsProps) {
   return (
     <section
       id="projects"
-      className="relative min-h-screen w-full bg-[#FFFFFF] text-[#090909] py-24 sm:py-32 overflow-hidden"
+      className="relative min-h-screen w-full bg-[#FFFFFF] text-[#090909] py-16 sm:py-24 md:py-32 overflow-hidden scroll-mt-20"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col gap-12 sm:gap-16">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col gap-10 sm:gap-16">
         {/* Section Header: Statement & Circular CTA */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-black/15 pb-10">
-          <div className="flex flex-col gap-4 max-w-2xl">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 sm:gap-8 border-b border-black/15 pb-8 sm:pb-10">
+          <div className="flex flex-col gap-3 sm:gap-4 max-w-2xl">
             <SectionLabel number="04" total="05" title="SELECTED WORKS" theme="light" sectionId="projects" />
-            <h2 className="font-display text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#050505] uppercase">
+            <h2 className="font-display text-4xl xs:text-5xl sm:text-7xl md:text-8xl tracking-tight text-[#050505] uppercase">
               FEATURED PROJECTS
             </h2>
-            <p className="text-base sm:text-lg text-[#555555] font-normal leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-[#555555] font-normal leading-relaxed">
               Commercial and open-source engineering systems built for high concurrency, low latency, and production reliability.
             </p>
           </div>
@@ -42,12 +42,12 @@ export default function Projects({ onOpenContact }: ProjectsProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onOpenContact}
-            className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-[#050505] bg-[#FFFFFF] hover:bg-[#050505] hover:text-white transition-all duration-300 flex flex-col items-center justify-center p-3 text-center self-start lg:self-auto cursor-pointer shadow-sm group select-none shrink-0"
+            className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-2 border-[#050505] bg-[#FFFFFF] hover:bg-[#050505] hover:text-white transition-all duration-300 flex flex-col items-center justify-center p-3 text-center self-start lg:self-auto cursor-pointer shadow-sm group select-none shrink-0"
           >
-            <span className="font-display text-sm tracking-wider leading-tight">
+            <span className="font-display text-xs sm:text-sm tracking-wider leading-tight">
               GET IN<br />TOUCH
             </span>
-            <ArrowUpRight className="w-4 h-4 mt-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 sm:mt-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </motion.button>
         </div>
 

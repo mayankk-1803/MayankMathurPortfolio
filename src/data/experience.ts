@@ -5,6 +5,7 @@ export interface ExperienceItem {
   duration: string;
   periodLabel: string;
   location: string;
+  workMode: string;
   current?: boolean;
   responsibilities: string[];
 }
@@ -16,7 +17,8 @@ export const experiences: ExperienceItem[] = [
     role: "Software Developer",
     duration: "August 2026 – Present",
     periodLabel: "CURRENT ROLE",
-    location: "India",
+    location: "Vancouver",
+    workMode: "Work From Home",
     current: true,
     responsibilities: [
       "Work with cloud technologies, databases, authentication, deployment workflows, and modern software development practices.",
@@ -31,6 +33,7 @@ export const experiences: ExperienceItem[] = [
     duration: "March 2026 – July 2026",
     periodLabel: "FINTECH ENGINEERING",
     location: "India",
+    workMode: "Work From Office",
     current: false,
     responsibilities: [
       "Developed and maintained scalable backend services using modern JavaScript/TypeScript practices.",
@@ -44,7 +47,8 @@ export const experiences: ExperienceItem[] = [
     role: "Frontend Developer Intern",
     duration: "June 2024 – July 2024",
     periodLabel: "FRONTEND INTERN",
-    location: "Remote",
+    location: "India",
+    workMode: "Work From Home",
     current: false,
     responsibilities: [
       "Built highly responsive React.js web interfaces, enhancing user experiences.",
@@ -58,7 +62,8 @@ export const experiences: ExperienceItem[] = [
     role: "Full Stack Developer Intern",
     duration: "March 2024 – May 2024",
     periodLabel: "FULL STACK INTERN",
-    location: "Remote",
+    location: "India",
+    workMode: "Work From Home",
     current: false,
     responsibilities: [
       "Engineered end-to-end MERN stack web applications from layout to deployment.",
