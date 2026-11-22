@@ -55,7 +55,7 @@ export default function About() {
               />
             </div>
 
-            {/* Current Active Role Stamp */}
+            {/* Production Role Stamp */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ export default function About() {
             >
               <div className="flex items-center gap-2 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-neutral-400">
                 <Briefcase className="w-4 h-4 text-white" />
-                <span>CURRENT PRODUCTION ROLE</span>
+                <span>RECENT PRODUCTION ROLE</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl text-white tracking-wide">
                 SOFTWARE DEVELOPER
@@ -74,8 +74,8 @@ export default function About() {
                 NetScale Software Private Limited
               </p>
               <div className="font-mono text-xs text-neutral-400 flex items-center justify-between border-t border-white/10 pt-3 mt-1">
-                <span>AUGUST 2026 – PRESENT</span>
-                <span className="text-emerald-400 font-semibold">ACTIVE</span>
+                <span>AUG, 2026 - OCT 2026</span>
+                <span className="text-neutral-400 font-semibold">COMPLETED</span>
               </div>
             </motion.div>
 

@@ -11,7 +11,7 @@ export const biography = {
     "I build scalable web and mobile applications, production-ready backend systems, and modern digital experiences.",
   summary:
     "Full Stack & React Native Developer experienced in building scalable web and mobile applications using React.js, React Native, Node.js, Express.js, MongoDB, TypeScript, and JavaScript. Proficient in REST APIs, authentication, Docker, Redis, AWS, and modern DevOps practices.",
-  currentRole: "Software Developer @ NetScale Software",
+  currentRole: "Software Developer (Ex-NetScale Software)",
   education: {
     degree: "B.Tech Computer Science",
     institution: "IIMT Engineering College (AKTU)",
